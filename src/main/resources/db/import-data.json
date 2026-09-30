@@ -1,0 +1,49 @@
+{
+  "roles": [
+    {
+      "name": "ADMIN",
+      "permissions": ["USER_READ", "USER_WRITE", "ROLE_READ", "ROLE_WRITE", "PERMISSION_READ"]
+    },
+    {
+      "name": "MANAGER",
+      "permissions": ["USER_READ", "USER_WRITE", "ROLE_READ"]
+    },
+    {
+      "name": "USER",
+      "permissions": ["USER_READ"]
+    }
+  ],
+  "permissions": [
+    { "code": "USER_READ", "description": "Чтение пользователей" },
+    { "code": "USER_WRITE", "description": "Создание и редактирование пользователей" },
+    { "code": "ROLE_READ", "description": "Чтение ролей" },
+    { "code": "ROLE_WRITE", "description": "Управление ролями" },
+    { "code": "PERMISSION_READ", "description": "Чтение разрешений" }
+  ],
+  "users": [
+    {
+      "email": "admin@example.com",
+      "name": "Администратор",
+      "active": true,
+      "roles": ["ADMIN"]
+    },
+    {
+      "email": "manager@example.com",
+      "name": "Менеджер",
+      "active": true,
+      "roles": ["MANAGER"]
+    },
+    {
+      "email": "user@example.com",
+      "name": "Обычный пользователь",
+      "active": true,
+      "roles": ["USER"]
+    },
+    {
+      "email": "blocked@example.com",
+      "name": "Заблокированный",
+      "active": false,
+      "roles": ["USER"]
+    }
+  ]
+}
